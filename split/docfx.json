@@ -3,12 +3,8 @@
     "content": [
       {
         "files": [
-<<<<<<< HEAD
           "**/*.md",
           "**/*.yml"
-=======
-          "**/*.md"
->>>>>>> origin/master
         ],
         "exclude": [
           "**/obj/**",
@@ -34,12 +30,9 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {
-      "breadcrumb_path": "/split-ppe/breadcrumb/toc.json",
-      "extendBreadcrumb": true
-    },
+    "globalMetadata": {},
     "fileMetadata": {},
     "template": [],
-    "dest": "split-ref-ppe"
+    "dest": "split-ppe"
   }
 }
