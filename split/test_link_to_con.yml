@@ -1,6 +1,6 @@
 ﻿### YamlMime:ManagedReference
 items:
-- uid: Microsoft.SqlServer.Server
+- uid: Microsoft.SqlServer.Server3
   commentId: N:Microsoft.SqlServer.Server
   id: Microsoft.SqlServer.Server
   children:
