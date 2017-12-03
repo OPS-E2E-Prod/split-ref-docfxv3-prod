@@ -8,9 +8,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Microsoft.SqlServer.Server
+  name: Microsoft.SqlServer.Server1
   nameWithType: Microsoft.SqlServer.Server
-  fullName: Microsoft.SqlServer.Server
+  fullName: Microsoft.SqlServer.Server1
   type: Namespace
   summary: "[content1](content1.md)"
   assemblies:
