@@ -3,12 +3,8 @@
     "content": [
       {
         "files": [
-<<<<<<< HEAD
           "**/*.md",
           "**/*.yml"
-=======
-          "**/*.md"
->>>>>>> origin/master
         ],
         "exclude": [
           "**/obj/**",
