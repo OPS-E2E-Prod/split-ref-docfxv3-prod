@@ -1,8 +1,6 @@
 - name: ReferenceIndex
   href: ../index.md
   universal_conceptual_toc: "/split-ppe/conceptual/toc.json"
- - name: Microsoft.SqlServer.Server.SqlMetaData
-  href: ../Microsoft.SqlServer.Server.SqlMetaData.yml
 - name: ref
   href: ../ref.yml
 - name: ref1
