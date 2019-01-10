@@ -1,9 +1,9 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "split-ref-docfxv3-ppe",
+      "docset_name": "split-ref-ppe",
       "build_source_folder": "split",
-      "build_output_subfolder": "split-ref-docfxv3-ppe",
+      "build_output_subfolder": "split-ppe",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -18,6 +18,7 @@
     }
   ],
   "notification_subscribers": [],
+  "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
@@ -28,14 +29,8 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
-    },
-    {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
-  "use_docfxv3": true
+  "need_generate_pdf_url_template": false
 }
