@@ -4,7 +4,7 @@ name: Delete Catalog Item
 service: SqlServer Report Server
 groupName: Catalog Items
 apiVersion: "2.0"
-summary: Deletes the specified CatalogItem.
+summary: Deletes the specified CatalogItem - "[content](content.md)"
 consumes:
 - application/json
 produces:
