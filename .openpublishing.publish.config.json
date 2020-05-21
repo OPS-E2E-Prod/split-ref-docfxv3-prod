@@ -15,7 +15,8 @@
         "NetDelegate": "Content",
         "NetNamespace": "Content",
         "NetMember": "Content",
-        "NetType": "Content"
+        "NetType": "Content",
+        "RESTOperation": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -58,6 +59,11 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
     }
   ],
   "branch_target_mapping": {},
@@ -82,5 +88,10 @@
       "target_framework": "net45",
       "version": "latest-prerelease"
     }
-  ]
+  ],
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  }
 }
