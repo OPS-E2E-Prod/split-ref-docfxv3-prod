@@ -1,79 +1,78 @@
-### YamlMime:ManagedReference
-items:
-- uid: Microsoft.SqlServer.Server.SqlMetaData
-  commentId: T:Microsoft.SqlServer.Server.SqlMetaData
-  id: SqlMetaData
-  parent: Microsoft.SqlServer.Server
-  children:
-  - Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String)
-  langs:
-  - csharp
-  - vb
-  name: SqlMetaData
-  nameWithType: SqlMetaData
-  fullName: Microsoft.SqlServer.Server.SqlMetaData
-  type: Class
-  source:
-    remote:
-      path: src/System.Data.SqlClient/src/System/Data/Sql/SqlMetaData.cs
-      branch: release/1.1.0
-      repo: https://github.com/dotnet/corefx.git
-    id: SqlMetaData
-    path: ../corefx/src/System.Data.SqlClient/src/System/Data/Sql/SqlMetaData.cs
-    startLine: 26
-  assemblies:
-  - System.Data.SqlClient
-  namespace: Microsoft.SqlServer.Server
-  summary: "This class cannot be inherited"
-  syntax:
-    content: public sealed class SqlMetaData
-    content.vb: Public NotInheritable Class SqlMetaData
-  modifiers.csharp:
-  - public
-  - sealed
-  - class
-  modifiers.vb:
-  - Public
-  - NotInheritable
-  - Class
-- uid: Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String)
-  commentId: M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String)
-  id: '#ctor(System.String)'
-  parent: Microsoft.SqlServer.Server.SqlMetaData
-  langs:
-  - csharp
-  - vb
-  name: SqlMetaData(String, SqlDbType)
-  nameWithType: SqlMetaData.SqlMetaData(String, SqlDbType)
-  fullName: Microsoft.SqlServer.Server.SqlMetaData.SqlMetaData(System.String)
-  type: Constructor
-  source:
-    remote:
-      path: src/System.Data.SqlClient/src/System/Data/Sql/SqlMetaData.cs
-      branch: release/1.1.0
-      repo: https://github.com/dotnet/corefx.git
-    id: .ctor
-    path: ../corefx/src/System.Data.SqlClient/src/System/Data/Sql/SqlMetaData.cs
-    startLine: 58
-  assemblies:
-  - System.Data.SqlClient
-  namespace: Microsoft.SqlServer.Server
-  summary: "class with the specified column name and type"
-  syntax:
-    content: public SqlMetaData(string name)
-    content.vb: Public Sub New(name As String)
-    parameters:
-    - id: name
-      type: System.String
-      description: "\n<p>The name of the column.</p>\n"
-  exceptions:
-  - type: System.ArgumentNullException
-    commentId: T:System.ArgumentNullException
-    description: "\n<p>The <span class=\"paramref\">Name</span> is <span class=\"languagekeyword\">null</span>.</p>\n"
-  - type: System.ArgumentException
-    commentId: T:System.ArgumentException
-    description: "sbc"
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
+### YamlMime:RESTOperation
+uid: localhost.reports/api/v2.0.sqlserverreportserver.catalogitems.movecatalogitems
+name: Move Catalog Items
+service: SqlServer Report Server
+groupName: Catalog Items
+apiVersion: "2.0"
+summary: Moves given list of items to target folder.
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+- content: POST http://localhost/reports/api/v2.0/CatalogItems/Model.MoveItems
+uriParameters: []
+responses:
+- name: 200 OK
+  description: Ok
+  types:
+  - uid: BulkOperationsResult
+- name: 400 Bad Request
+  description: Couldn't understand your request.
+- name: Other Status Codes
+  description: Error
+  types:
+  - uid: odata.error
+requestHeader: []
+definitions:
+- name: BulkOperationsResult
+  description: BulkOperationsResult
+  kind: object
+  properties:
+  - name: FailedOperations
+    types:
+    - uid: string
+      isArray: true
+  - name: HasErrors
+    types:
+    - uid: boolean
+- name: odata.error
+  kind: object
+  properties:
+  - name: error
+    types:
+    - uid: odata.error.main
+- name: odata.error.main
+  kind: object
+  properties:
+  - name: code
+    types:
+    - uid: string
+  - name: message
+    types:
+    - uid: string
+  - name: target
+    types:
+    - uid: string
+  - name: details
+    types:
+    - uid: odata.error.detail
+      isArray: true
+  - name: innererror
+    description: The structure of this object is service-specific.
+    types:
+    - uid: object
+- name: odata.error.detail
+  kind: object
+  properties:
+  - name: code
+    types:
+    - uid: string
+  - name: message
+    types:
+    - uid: string
+  - name: target
+    types:
+    - uid: string
+examples: []
+security: []
