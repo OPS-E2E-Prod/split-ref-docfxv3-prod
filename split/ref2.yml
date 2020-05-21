@@ -1,16 +1,16 @@
 ﻿### YamlMime:RESTOperation
-uid: localhost.reports/api/v2.0.sqlserverreportserver.catalogitems.deletecatalogitem
-name: Delete Catalog Item
+uid: localhost.reports/api/v2.0.sqlserverreportserver.catalogitems.getcatalogitemcontent
+name: Get Catalog Item Content
 service: SqlServer Report Server
 groupName: Catalog Items
 apiVersion: "2.0"
-summary: Deletes the specified CatalogItem - "[content](content2.md)"
+summary: Gets the content of the specified CatalogItem specified by the Id.
 consumes:
 - application/json
 produces:
-- application/json
+- application/octet-stream
 paths:
-- content: DELETE http://localhost/reports/api/v2.0/CatalogItems({Id})
+- content: GET http://localhost/reports/api/v2.0/CatalogItems({Id})/Content/$value
 uriParameters:
 - name: Id
   in: path
@@ -26,7 +26,13 @@ uriParameters:
   format: string
 responses:
 - name: 200 OK
-  description: Ok
+  description: The content of the CatalogItem specified by the Id.
+  types:
+  - uid: file
+- name: 204 No Content
+  description: No content.
+- name: Other Status Codes
+  description: Not found.
 - name: Other Status Codes
   description: Error
   types:

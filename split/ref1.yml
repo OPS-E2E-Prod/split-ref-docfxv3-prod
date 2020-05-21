@@ -1,38 +1,41 @@
 ﻿### YamlMime:RESTOperation
-uid: localhost.reports/api/v2.0.sqlserverreportserver.catalogitems.deletecatalogitem
-name: Delete Catalog Item
+uid: localhost.reports/api/v2.0.sqlserverreportserver.catalogitems.deletecatalogitems
+name: Delete Catalog Items
 service: SqlServer Report Server
 groupName: Catalog Items
 apiVersion: "2.0"
-summary: Deletes the specified CatalogItem - "[content](content1.md)"
+summary: Deletes the given list of items
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: DELETE http://localhost/reports/api/v2.0/CatalogItems({Id})
-uriParameters:
-- name: Id
-  in: path
-  isRequired: true
-  description: >-
-    The key (GUID or path) that uniquely identifies the object.
-
-    GUID example: 01234567-89ab-cdef-0123-456789abcdef
-
-    path example: path='/folder1/folder2/item'
-  types:
-  - uid: string
-  format: string
+- content: POST http://localhost/reports/api/v2.0/CatalogItems/Model.DeleteItems
+uriParameters: []
 responses:
 - name: 200 OK
   description: Ok
+  types:
+  - uid: BulkOperationsResult
+- name: 400 Bad Request
+  description: Couldn't understand your request.
 - name: Other Status Codes
   description: Error
   types:
   - uid: odata.error
 requestHeader: []
 definitions:
+- name: BulkOperationsResult
+  description: BulkOperationsResult
+  kind: object
+  properties:
+  - name: FailedOperations
+    types:
+    - uid: string
+      isArray: true
+  - name: HasErrors
+    types:
+    - uid: boolean
 - name: odata.error
   kind: object
   properties:
