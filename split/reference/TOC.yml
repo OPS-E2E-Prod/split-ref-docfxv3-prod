@@ -5,9 +5,5 @@
   href: ../Microsoft.SqlServer.Server.SqlMetaData.yml
 - name: ref
   href: ../ref.yml
-- name: ref1
-  href: ../ref1.yml
-- name: ref2
-  href: ../ref2.yml
 - name: updateTestRef
   href: ../updateTestRef.md
