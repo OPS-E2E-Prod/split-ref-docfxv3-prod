@@ -3,7 +3,7 @@
     {
       "docset_name": "split-ref-docfxv3-ppe",
       "build_source_folder": "split",
-      "build_output_subfolder": "split-ref-docfxv3-ppe",
+      "build_output_subfolder": "split-docfxv3-ppe",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -27,6 +27,11 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
     }
   ],
   "branch_target_mapping": {},
@@ -40,21 +45,5 @@
     "name": "docfx_v3"
   },
   "need_generate_pdf": false,
-  "need_generate_intellisense": false,
-  "dependent_packages": [
-    {
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op-dev/api/v2",
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest-prerelease"
-    },
-    {
-      "id": "Microsoft.DocAsCode.ECMA2Yaml",
-      "nuget_feed": "https://www.myget.org/F/op-dev/api/v2",
-      "path_to_root": "_dependentPackages/ECMA2Yaml",
-      "target_framework": "net45",
-      "version": "latest-prerelease"
-    }
-  ]
+  "need_generate_intellisense": false
 }
