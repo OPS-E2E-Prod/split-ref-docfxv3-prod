@@ -3,7 +3,7 @@
     {
       "docset_name": "split-ref-docfxv3-ppe",
       "build_source_folder": "split",
-      "build_output_subfolder": "split-ref-docfxv3-ppe",
+      "build_output_subfolder": "split-docfxv3-ppe",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
