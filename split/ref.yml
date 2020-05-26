@@ -1,75 +1,19 @@
-﻿### YamlMime:RESTOperation
-uid: localhost.reports/api/v2.0.sqlserverreportserver.catalogitems.deletecatalogitem
-name: Delete Catalog Item
-service: SqlServer Report Server
-groupName: Catalog Items
-apiVersion: "2.0"
-summary: Deletes the specified CatalogItem.
-consumes:
-- application/json
-produces:
-- application/json
-paths:
-- content: DELETE http://localhost/reports/api/v2.0/CatalogItems({Id})
-uriParameters:
-- name: Id
-  in: path
-  isRequired: true
-  description: >-
-    The key (GUID or path) that uniquely identifies the object.
-
-    GUID example: 01234567-89ab-cdef-0123-456789abcdef
-
-    path example: path='/folder1/folder2/item'
-  types:
-  - uid: string
-  format: string
-responses:
-- name: 200 OK
-  description: Ok
-- name: Other Status Codes
-  description: Error
-  types:
-  - uid: odata.error
-requestHeader: []
-definitions:
-- name: odata.error
-  kind: object
-  properties:
-  - name: error
-    types:
-    - uid: odata.error.main
-- name: odata.error.main
-  kind: object
-  properties:
-  - name: code
-    types:
-    - uid: string
-  - name: message
-    types:
-    - uid: string
-  - name: target
-    types:
-    - uid: string
-  - name: details
-    types:
-    - uid: odata.error.detail
-      isArray: true
-  - name: innererror
-    description: The structure of this object is service-specific.
-    types:
-    - uid: object
-- name: odata.error.detail
-  kind: object
-  properties:
-  - name: code
-    types:
-    - uid: string
-  - name: message
-    types:
-    - uid: string
-  - name: target
-    types:
-    - uid: string
-examples: []
-security: []
+﻿### YamlMime:Tutorial
+title: Ref Test
+metadata:
+  title: Test for metadata
+  description: Learn about using environments and data protection policies to manage data sources and flows.
+  audience: Business User
+  level: Beginner
+items:
+- durationInMinutes: 1
+  content: |
+    # Title
+    *italic* 
+    **bold** 
+    ~~deleted~~ 
+    [link](/content)
+- title: Use environments to manage flows
+  durationInMinutes: 8
+  content: |
+    > [!Video https://www.youtube.com/embed/wnScBLz7css?rel=0]
